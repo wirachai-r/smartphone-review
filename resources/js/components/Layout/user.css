@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Thai+Looped:wght@100..900&family=Noto+Sans+Thai:wght@100..900&family=Noto+Serif+Thai:wght@100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: "Noto Sans Thai", "Prompt", "Kanit", sans-serif;
+  font-weight: 400; /* สามารถเปลี่ยนเป็น 500, 600, 700 ตามต้องการ */
+  font-style: normal;
+}
+
+.custom-slide {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: var(--bs-primary);
+  z-index: 1050;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.custom-slide.show.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.offcanvas-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: background 0.4s ease;
+  z-index: 1040;
+  visibility: hidden;
+}
+
+.offcanvas-backdrop.show.visible {
+  background: rgba(0, 0, 0, 0.5);
+  visibility: visible;
+}
+
+.bg-gray {
+  background-color: #f4f4f4 !important;
+}
+
+/* สีหลักของระบบ (เดิมเป็นส้ม) -> เปลี่ยนเป็นน้ำเงิน */
+.bg-orange {
+  background-color: #0d6efd !important;
+}
+.text-orange {
+  color: #0d6efd !important;
+}
+.btn-orange {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+}
+.btn-orange:hover {
+  background-color: #0b5ed7 !important; /* สีเข้มขึ้นตอน hover */
+}
+
+/* rank-number */
+.rank-number {
+  width: 26px;
+  height: 26px;
+  background-color: #0d6efd; /* เปลี่ยนจากส้มเป็นน้ำเงิน */
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 26px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* hover-list */
+.hover-list:hover {
+  background-color: #e7f1ff; /* สีฟ้าอ่อนเวลา hover */
+}
+
+/* Indicators ของ carousel */
+.carousel-indicators button {
+  background-color: #5a5a5a !important; /* สีเทาเข้มเหมือนเดิม */
+}
+.carousel-indicators .active {
+  background-color: #0b5ed7 !important; /* active เป็นน้ำเงินเข้ม */
+}
+
+/* ปุ่ม Next/Prev ของ carousel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(28%) sepia(91%) saturate(5723%) hue-rotate(198deg) brightness(95%) contrast(101%);
+}
+
+
+.phone-specs strong {
+  color: #0b5ed7;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.btn-link{
+    color: #797979;
+    text-decoration: none;
+
+}
+
+.btn-link:hover{
+    color: #0b5ed7;
+}
